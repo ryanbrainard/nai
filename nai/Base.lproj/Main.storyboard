@@ -16,11 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FhZ-gv-WBk">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FhZ-gv-WBk">
                                 <rect key="frame" x="0.0" y="209" width="600" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="455262920.89705199">
                                     <!--2015-06-06 05:55:20 +0000-->
                                 </date>
+                                <connections>
+                                    <action selector="birthdayOnChange:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="QLn-V7-rhq"/>
+                                </connections>
                             </datePicker>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1p2-ye-WSc">
                                 <rect key="frame" x="252" y="485" width="97" height="30"/>
@@ -40,6 +43,9 @@
                             <constraint firstItem="FhZ-gv-WBk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cUB-8i-ryj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="koreanAge" destination="1p2-ye-WSc" id="yOB-Tq-91M"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

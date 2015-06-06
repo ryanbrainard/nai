@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var koreanAge: UITextField!
+
+    @IBAction func birthdayOnChange(sender: UIDatePicker, forEvent event: UIEvent) {
+        let cal = NSCalendar.currentCalendar()
+        let yearBorn = cal.component(.CalendarUnitYear, fromDate: sender.date)
+        let currYear = cal.component(.CalendarUnitYear, fromDate: NSDate())
+        koreanAge.text = (currYear - yearBorn + 1).description
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
