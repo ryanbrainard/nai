@@ -18,7 +18,13 @@ class ViewController: UIViewController {
     }
     
     func renderKoreanAge() {
-        koreanAgeTextField.text = koreanAge().description + " years old"
+        let age = koreanAge()
+        var label = " year"
+        if age > 1 {
+            label += "s"
+        }
+        label += " old"
+        koreanAgeTextField.text = age.description + label
     }
     
     func koreanAge() -> Int {
