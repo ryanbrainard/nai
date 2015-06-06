@@ -30,6 +30,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        birthdayDatePicker.maximumDate = NSDate()
     }
 
     override func didReceiveMemoryWarning() {
