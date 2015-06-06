@@ -25,8 +25,8 @@
                                     <action selector="birthdayOnChange:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="QLn-V7-rhq"/>
                                 </connections>
                             </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1p2-ye-WSc">
-                                <rect key="frame" x="252" y="485" width="97" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1p2-ye-WSc">
+                                <rect key="frame" x="214" y="467" width="175" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="vdy-8F-IF9"/>
                                 </constraints>
@@ -44,7 +44,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="koreanAge" destination="1p2-ye-WSc" id="yOB-Tq-91M"/>
+                        <outlet property="birthdayDatePicker" destination="FhZ-gv-WBk" id="tYh-7t-pyf"/>
+                        <outlet property="koreanAgeTextField" destination="1p2-ye-WSc" id="yOB-Tq-91M"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

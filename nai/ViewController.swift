@@ -10,24 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var koreanAge: UITextField!
+    @IBOutlet weak var birthdayDatePicker: UIDatePicker!
+    @IBOutlet weak var koreanAgeTextField: UITextField!
 
     @IBAction func birthdayOnChange(sender: UIDatePicker, forEvent event: UIEvent) {
-        let cal = NSCalendar.currentCalendar()
-        let yearBorn = cal.component(.CalendarUnitYear, fromDate: sender.date)
-        let currYear = cal.component(.CalendarUnitYear, fromDate: NSDate())
-        koreanAge.text = (currYear - yearBorn + 1).description
+        renderKoreanAge()
     }
+    
+    func renderKoreanAge() {
+        koreanAgeTextField.text = koreanAge().description + " years old"
+    }
+    
+    func koreanAge() -> Int {
+        let cal = NSCalendar.currentCalendar()
+        let yearBorn = cal.component(.CalendarUnitYear, fromDate: birthdayDatePicker.date)
+        let currYear = cal.component(.CalendarUnitYear, fromDate: NSDate())
+        return currYear - yearBorn + 1
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
-
