@@ -36,6 +36,7 @@
 		2E7D74CA1B22C2920047AC34 /* naiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = naiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E7D74CF1B22C2920047AC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E7D74D01B22C2920047AC34 /* naiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = naiTests.swift; sourceTree = "<group>"; };
+		2E7D74DB1B22D1780047AC34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +241,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				2E7D74BF1B22C2920047AC34 /* Base */,
+				2E7D74DB1B22D1780047AC34 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

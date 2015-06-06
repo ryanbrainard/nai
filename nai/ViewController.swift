@@ -19,12 +19,13 @@ class ViewController: UIViewController {
     
     func renderKoreanAge() {
         let age = koreanAge()
-        var label = " year"
+        var txt = "In Korea, you are " + age.description
+        txt += " year"
         if age > 1 {
-            label += "s"
+            txt += "s"
         }
-        label += " old"
-        koreanAgeTextField.text = age.description + label
+        txt += " old!"
+        koreanAgeTextField.text = txt
     }
     
     func koreanAge() -> Int {
