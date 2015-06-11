@@ -11,28 +11,25 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var birthdayDatePicker: UIDatePicker!
-    @IBOutlet weak var koreanAgeTextField: UITextField!
+    @IBOutlet weak var koreanAgeTextView: UITextView!
+    let cal = NSCalendar.currentCalendar()
 
     @IBAction func birthdayOnChange(sender: UIDatePicker, forEvent event: UIEvent) {
-        renderKoreanAge()
-    }
-    
-    func renderKoreanAge() {
-        let age = koreanAge()
-        var txt = "In Korea, you are " + age.description
-        txt += " year"
-        if age > 1 {
-            txt += "s"
-        }
-        txt += " old!"
-        koreanAgeTextField.text = txt
+        koreanAgeTextView.text = "In Korea, you are \(yearUnit(koreanAge())) old. In the rest of the world, you are \(yearUnit(realAge())) old."
     }
     
     func koreanAge() -> Int {
-        let cal = NSCalendar.currentCalendar()
         let yearBorn = cal.component(.CalendarUnitYear, fromDate: birthdayDatePicker.date)
         let currYear = cal.component(.CalendarUnitYear, fromDate: NSDate())
         return currYear - yearBorn + 1
+    }
+    
+    func realAge() -> Int {
+        return cal.components(NSCalendarUnit.CalendarUnitYear, fromDate: birthdayDatePicker.date, toDate: NSDate(), options: nil).year
+    }
+    
+    func yearUnit(count: Int) -> String {
+        return "\(count) year".pluralize(count)
     }
     
     override func viewDidLoad() {

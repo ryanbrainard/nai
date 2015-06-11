@@ -16,12 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When were you born?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs8-K9-INw">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="When were you born?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gs8-K9-INw">
                                 <rect key="frame" x="0.0" y="62" width="600" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="Qkg-qv-XW8"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -37,30 +37,30 @@
                                     <action selector="birthdayOnChange:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="QLn-V7-rhq"/>
                                 </connections>
                             </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1p2-ye-WSc">
-                                <rect key="frame" x="0.0" y="395" width="600" height="30"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lhc-0z-tdJ">
+                                <rect key="frame" x="180" y="353" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="VxQ-lH-kYI"/>
+                                    <constraint firstAttribute="width" constant="240" id="dwh-lA-EwI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="1p2-ye-WSc" firstAttribute="trailing" secondItem="FhZ-gv-WBk" secondAttribute="trailing" id="5PN-3p-U0E"/>
+                            <constraint firstItem="Lhc-0z-tdJ" firstAttribute="top" secondItem="FhZ-gv-WBk" secondAttribute="bottom" constant="73" id="1Vu-S1-zQX"/>
+                            <constraint firstItem="Lhc-0z-tdJ" firstAttribute="centerX" secondItem="FhZ-gv-WBk" secondAttribute="centerX" id="AFL-bI-gTM"/>
                             <constraint firstItem="FhZ-gv-WBk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="98" id="Fcz-eN-acU"/>
-                            <constraint firstItem="1p2-ye-WSc" firstAttribute="leading" secondItem="FhZ-gv-WBk" secondAttribute="leading" id="HrM-iv-I7r"/>
                             <constraint firstAttribute="trailing" secondItem="FhZ-gv-WBk" secondAttribute="trailing" id="Sne-ag-P63"/>
                             <constraint firstItem="gs8-K9-INw" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="42" id="Zhz-UL-ycz"/>
                             <constraint firstItem="FhZ-gv-WBk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cUB-8i-ryj"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1p2-ye-WSc" secondAttribute="bottom" constant="175" id="j1A-3p-VdB"/>
                             <constraint firstItem="gs8-K9-INw" firstAttribute="centerX" secondItem="FhZ-gv-WBk" secondAttribute="centerX" id="mhZ-KH-MhY"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="birthdayDatePicker" destination="FhZ-gv-WBk" id="tYh-7t-pyf"/>
-                        <outlet property="koreanAgeTextField" destination="1p2-ye-WSc" id="yOB-Tq-91M"/>
+                        <outlet property="koreanAgeTextView" destination="Lhc-0z-tdJ" id="3wf-ug-0dn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
