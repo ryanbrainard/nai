@@ -16,7 +16,7 @@ class ViewController: UIViewController {
 
     @IBAction func birthdayOnChange(sender: UIDatePicker, forEvent event: UIEvent) {
         koreanAgeTextView.text =
-            "In Korea, you are \(yearUnit(koreanAge())) old." +
+            "In Korea, you are \(yearUnit(koreanAge())) old. " +
             "In the rest of the world, you are \(yearUnit(realAge())) old."
     }
     
