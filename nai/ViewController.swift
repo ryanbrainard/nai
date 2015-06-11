@@ -15,7 +15,9 @@ class ViewController: UIViewController {
     let cal = NSCalendar.currentCalendar()
 
     @IBAction func birthdayOnChange(sender: UIDatePicker, forEvent event: UIEvent) {
-        koreanAgeTextView.text = "In Korea, you are \(yearUnit(koreanAge())) old. In the rest of the world, you are \(yearUnit(realAge())) old."
+        koreanAgeTextView.text =
+            "In Korea, you are \(yearUnit(koreanAge())) old." +
+            "In the rest of the world, you are \(yearUnit(realAge())) old."
     }
     
     func koreanAge() -> Int {
@@ -25,7 +27,12 @@ class ViewController: UIViewController {
     }
     
     func realAge() -> Int {
-        return cal.components(NSCalendarUnit.CalendarUnitYear, fromDate: birthdayDatePicker.date, toDate: NSDate(), options: nil).year
+        return cal.components(
+            NSCalendarUnit.CalendarUnitYear,
+            fromDate: birthdayDatePicker.date,
+            toDate: NSDate(),
+            options: nil
+        ).year
     }
     
     func yearUnit(count: Int) -> String {
