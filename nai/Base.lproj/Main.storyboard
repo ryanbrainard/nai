@@ -30,9 +30,6 @@
                                 <date key="date" timeIntervalSinceReferenceDate="455262920.89705199">
                                     <!--2015-06-06 05:55:20 +0000-->
                                 </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
-                                    <!--2037-12-31 11:00:00 +0000-->
-                                </date>
                                 <connections>
                                     <action selector="birthdayOnChange:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="QLn-V7-rhq"/>
                                 </connections>
